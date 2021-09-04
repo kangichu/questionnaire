@@ -31,7 +31,7 @@ class AdminController extends Controller
         ->join('questionnaires',  'questions.questionnaire_id' , '=','questionnaires.id')
         ->where('questionnaires.user_id', $user_id )
         ->select('questions.question', DB::raw('count(survey_responses.id)  as occurences'))
-        ->groupBy('questions.id')
+        ->groupBy('questions.question')
         ->get();
 
         if ((Auth::user()->password_change_at == null)) {
