@@ -34,13 +34,13 @@
                         <div class="send-otp">
 
                             <div class="flex flex-wrap mb-6">
-                                <label for="mobile" class="block text-gray-700 text-sm font-bold mb-2">
-                                    {{ __('Mobile Number') }}:
+                                <label for="email" class="block text-gray-700 text-sm font-bold mb-2">
+                                    {{ __('Email Address') }}:
                                 </label>
 
-                                <input id="mobile" type="number" class="form-input w-full @error('mobile') border-red-500 @enderror" name="mobile" value="{{ old('mobile') }}" placeholder="254xxxxxxxx" required autocomplete="mobile" autofocus>
+                                <input id="email" type="email" class="form-input w-full @error('email') border-red-500 @enderror" name="email" value="{{ old('email') }}" placeholder="test@test.com" required autocomplete="email" autofocus>
 
-                                @error('mobile')
+                                @error('email')
                                     <p class="text-red-500 text-xs italic mt-4">
                                         {{ $message }}
                                     </p>
